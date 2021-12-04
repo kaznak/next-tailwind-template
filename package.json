@@ -5,7 +5,7 @@
     "build": "next build",
     "dev": "next dev",
     "format": "sort-package-json && prettier --write .",
-    "lint": "eslint . --ext ts --ext tsx --ext js",
+    "lint": "eslint . --ext ts --ext tsx --ext js --ext jsx",
     "prepare": "husky install",
     "start": "next start",
     "test": "jest",
