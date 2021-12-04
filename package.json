@@ -3,7 +3,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "format": "prettier --write .",
+    "format": "sort-package-json && prettier --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "prepare": "husky install",
     "start": "next start",
