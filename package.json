@@ -13,8 +13,10 @@
     "type-check": "tsc --pretty --noEmit"
   },
   "lint-staged": {
-    "*.@(ts|tsx)": [
-      "yarn lint",
+    "*.@(ts|tsx|js|jsx)": [
+      "yarn lint"
+    ],
+    "*.@(ts|tsx|js|jsx|json|md)": [
       "yarn format"
     ]
   },
