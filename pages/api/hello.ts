@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { ApiRoute } from 'lib/apiRoute'
 
-type HelloApiResponse = {
+export type HelloApiResponse = {
   name: string
 }
 
