@@ -13,4 +13,5 @@ beforeAll(() => server.listen())
 afterEach(() => server.resetHandlers())
 afterAll(() => server.close())
 
+// @ts-expect-error for the type difference between `node-fetch` and `typescript/lib/lib.dom.d.ts`.
 global.fetch = (input, init?) => nodeFetch(baseUrl + input, init)
