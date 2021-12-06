@@ -5,6 +5,11 @@ export type AuthInfo = {
   email: string
 }
 
+export type AuthApiResponse = {
+  ok: boolean
+  auth: AuthInfo
+}
+
 const loginRoute = new ApiRoute()
 
 loginRoute.handlers['GET'] = (req, res) => {
