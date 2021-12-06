@@ -53,12 +53,21 @@ export class ApiRoute<T = any> {
     return Object.keys(this.handlers) as HttpMethods[]
   }
 
-  constructor(
-    handlers: HandlersMap<T> = undefined,
-    defaultHandler = undefined,
-    defaultErrorHandler = undefined
-  ) {
-    this.handlers = handlers || { OPTIONS: this.methodOptionHandler }
+  constructor({
+    handlers,
+    additionalHandlers,
+    defaultHandler,
+    defaultErrorHandler,
+  }: Partial<{
+    handlers: HandlersMap<T>
+    additionalHandlers: HandlersMap<T>
+    defaultHandler: NextApiHandler<T>
+    defaultErrorHandler: NextApiExtendedHandler<T>
+  }> = {}) {
+    this.handlers = Object.assign(
+      handlers || { OPTIONS: this.methodOptionHandler },
+      additionalHandlers
+    )
     this.defaultHandler = defaultHandler || this.status405handler
     this.defaultErrorHandler = defaultErrorHandler || this.status500handler
   }
