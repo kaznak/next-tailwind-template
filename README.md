@@ -4,6 +4,7 @@ Bootstrap a developer-friendly NextJS app configured with:
 
 - [Typescript](https://www.typescriptlang.org/)
 - [Tailwindcss](https://tailwindcss.com/) for styling
+- [SWR](https://swr.vercel.app) for data fetching
 - Linting with [ESLint](https://eslint.org/)
 - Formatting with [Prettier](https://prettier.io/)
 - Linting, typechecking and formatting on by default using [`husky`](https://github.com/typicode/husky) for commit hooks
