@@ -1,6 +1,10 @@
 import { withSessionRoute } from 'lib/withSession'
 import { ApiRoute } from 'lib/apiRoute'
 
+export type AuthInfo = {
+  email: string
+}
+
 const loginRoute = new ApiRoute()
 
 loginRoute.handlers['GET'] = (req, res) => {
