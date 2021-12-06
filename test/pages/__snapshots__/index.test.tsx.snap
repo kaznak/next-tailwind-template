@@ -32,7 +32,7 @@ exports[`Home page matches snapshot 1`] = `
       <button
         class="my-3 px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
       >
-        Test Button
+        API Test Button
       </button>
       <div
         class="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full"
@@ -84,7 +84,7 @@ exports[`Home page matches snapshot 1`] = `
         </a>
         <a
           class="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://vercel.com/import?filter=next.js"
         >
           <h3
             class="text-2xl font-bold"
@@ -104,16 +104,34 @@ exports[`Home page matches snapshot 1`] = `
     >
       <a
         class="flex items-center justify-center"
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+        href="https://vercel.com"
         rel="noopener noreferrer"
         target="_blank"
       >
         Powered by 
-        <img
-          alt="Vercel Logo"
-          class="h-4 ml-2"
-          src="/vercel.svg"
-        />
+        <span
+          style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+        >
+          <span
+            style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+          >
+            <img
+              alt=""
+              aria-hidden="true"
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAuNzUiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+              style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+            />
+          </span>
+          <img
+            alt="Vercel Logo"
+            class="h-4 ml-2"
+            data-nimg="intrinsic"
+            decoding="async"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+          />
+          <noscript />
+        </span>
       </a>
     </footer>
   </div>
