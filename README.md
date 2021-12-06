@@ -4,6 +4,7 @@ Bootstrap a developer-friendly NextJS app configured with:
 
 - [Typescript](https://www.typescriptlang.org/)
 - [Tailwindcss](https://tailwindcss.com/) for styling
+- [iron-session](https://github.com/vvo/iron-session) for session management
 - [SWR](https://swr.vercel.app) for data fetching
 - Linting with [ESLint](https://eslint.org/)
 - Formatting with [Prettier](https://prettier.io/)
