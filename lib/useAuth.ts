@@ -10,21 +10,9 @@ export default function useAuth({
 } = {}) {
   const { data, mutate: mutateAuth } = useSWR<AuthApiResponse>('/api/auth')
 
-  // const { ok, auth: authInfo } = data
-  // console.log(authInfo)
-  // console.log(redirectIfFound && authInfo)
-
   useEffect(() => {
-    // if no redirect needed, just return (example: already on /dashboard)
-    // if AuthInfo data not yet there (fetch in progress, logged in or not) then don't do anything yet
     if (!redirectTo || !data) return
-
-    if (
-      // If redirectTo is set, redirect if the AuthInfo was not found.
-      (!redirectIfFound && !data.auth) ||
-      // If redirectIfFound is also set, redirect if the AuthInfo was found
-      (redirectIfFound && data.auth)
-    ) {
+    if ((!redirectIfFound && !data.auth) || (redirectIfFound && data.auth)) {
       Router.push(redirectTo)
     }
   }, [data, redirectIfFound, redirectTo])
