@@ -16,7 +16,7 @@
     "*.@(ts|tsx|js|jsx)": [
       "yarn lint"
     ],
-    "*.@(ts|tsx|js|jsx|json|md)": [
+    "*": [
       "yarn format"
     ]
   },
