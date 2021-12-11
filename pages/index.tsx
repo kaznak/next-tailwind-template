@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import { fetchJson } from 'lib/fetchJson'
-import type { HelloApiResponse } from 'pages/api/hello'
+import type { HelloApiResponse } from 'lib/pages/api/hello'
 
 export function Home() {
   return (
