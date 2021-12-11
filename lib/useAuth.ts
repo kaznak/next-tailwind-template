@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import Router from 'next/router'
 import useSWR from 'swr'
 
-import type { AuthApiResponse } from 'pages/api/auth'
+import type { AuthApiResponse } from 'lib/pages/api/auth'
 
 export default function useAuth({
   redirectTo = undefined,
