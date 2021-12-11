@@ -7,14 +7,6 @@ import {
 
 import { sessionOptions } from 'configs/app'
 
-import type { AuthInfo } from 'pages/api/auth'
-
-declare module 'iron-session' {
-  interface IronSessionData {
-    auth?: AuthInfo
-  }
-}
-
 export function withSessionRoute(handler: NextApiHandler) {
   return withIronSessionApiRoute(handler, sessionOptions)
 }
