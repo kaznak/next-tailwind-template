@@ -1,16 +1,9 @@
 import { withSessionRoute } from 'lib/withSession'
 import { ApiRoute } from 'lib/apiRoute'
 
-export type AuthInfo = {
-  email: string
-}
+import type { AuthApiResponse } from 'lib/pages/api/auth'
 
-export type AuthApiResponse = {
-  ok: boolean
-  auth: AuthInfo
-}
-
-const loginRoute = new ApiRoute()
+const loginRoute = new ApiRoute<AuthApiResponse>()
 
 loginRoute.handlers['GET'] = (req, res) => {
   // get sign-in state
