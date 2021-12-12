@@ -8,7 +8,7 @@ const loginRoute = new ApiRoute<AuthApiResponse>()
 loginRoute.handlers['GET'] = (req, res) => {
   // get sign-in state
   const { auth } = req.session
-  res.send({ ok: true, auth })
+  res.json({ ok: true, auth })
 }
 
 loginRoute.handlers['POST'] = async (req, res) => {
@@ -18,7 +18,7 @@ loginRoute.handlers['POST'] = async (req, res) => {
   const auth = { email }
   req.session.auth = auth
   await req.session.save()
-  res.send({ ok: true, auth })
+  res.json({ ok: true, auth })
 }
 
 loginRoute.handlers['PUT'] = async (req, res) => {
@@ -28,7 +28,7 @@ loginRoute.handlers['PUT'] = async (req, res) => {
   const auth = { email }
   req.session.auth = auth
   await req.session.save()
-  res.send({ ok: true, auth })
+  res.json({ ok: true, auth })
 }
 
 loginRoute.handlers['DELETE'] = async (req, res) => {
@@ -36,7 +36,7 @@ loginRoute.handlers['DELETE'] = async (req, res) => {
   req.session.auth = undefined
   await req.session.save()
   const { auth } = req.session
-  res.send({ ok: true, auth })
+  res.json({ ok: true, auth })
 }
 
 export default withSessionRoute(loginRoute.handler)
