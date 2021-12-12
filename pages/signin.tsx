@@ -1,4 +1,4 @@
-import useAuth from 'lib/useAuth'
+import useAuth from 'hooks/useAuth'
 
 export const SignIn = () => {
   const { errorMessage, signInHandler } = useAuth({
