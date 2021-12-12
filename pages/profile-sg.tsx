@@ -1,4 +1,4 @@
-import useAuth from 'lib/useAuth'
+import useAuth from 'hooks/useAuth'
 
 export default function SgProfile() {
   const { errorMessage, auth, signOutHandler } = useAuth({
