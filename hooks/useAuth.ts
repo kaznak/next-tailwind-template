@@ -1,8 +1,9 @@
 import { useState, useEffect, useCallback, FormEvent } from 'react'
 import Router from 'next/router'
 import useSWR from 'swr'
-import { fetchJson, FetchError } from 'lib/fetchJson'
+import { FetchError } from 'lib/fetchJson'
 import type { AuthRequest, AuthApiResponse } from 'lib/pages/api/auth'
+import { signIn as signInRaw, signOut as signOutRaw } from 'lib/apiClients/auth'
 
 export default function useAuth({
   redirectTo = undefined,
@@ -19,14 +20,7 @@ export default function useAuth({
   }, [data, redirectIfFound, redirectTo])
 
   const signIn = useCallback(
-    async (body: AuthRequest) =>
-      mutateAuth(
-        await fetchJson('/api/auth', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(body),
-        })
-      ),
+    async (body: AuthRequest) => mutateAuth(await signInRaw(body)),
     [mutateAuth]
   )
 
@@ -50,13 +44,7 @@ export default function useAuth({
   )
 
   const signOut = useCallback(
-    async () =>
-      mutateAuth(
-        await fetchJson('/api/auth', {
-          method: 'DELETE',
-          headers: { 'Content-Type': 'application/json' },
-        })
-      ),
+    async () => mutateAuth(await signOutRaw()),
     [mutateAuth]
   )
 
