@@ -1,5 +1,6 @@
-node_modules
-.next
-yarn.lock
+.next/
+node_modules/
+out/
 package-lock.json
 public
+yarn.lock
