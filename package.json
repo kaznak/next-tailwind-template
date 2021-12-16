@@ -4,7 +4,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "format": "sort-package-json && prettier --write .",
+    "format": "sort-package-json && prettier --ignore-unknown --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js --ext jsx",
     "prepare": "husky install",
     "start": "next start",
@@ -16,8 +16,12 @@
     "*.@(ts|tsx|js|jsx)": [
       "yarn lint"
     ],
+    "package.json": [
+      "sort-package-json",
+      "prettier --write"
+    ],
     "*": [
-      "yarn format"
+      "prettier --ignore-unknown --write"
     ]
   },
   "dependencies": {
