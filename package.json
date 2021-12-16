@@ -4,6 +4,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
+    "export": "next export",
     "format": "sort-package-json && prettier --ignore-unknown --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js --ext jsx",
     "prepare": "husky install",
