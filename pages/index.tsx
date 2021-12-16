@@ -1,5 +1,8 @@
 import Head from 'next/head'
 
+// You can use `next/image` with third party image optimizers while using static site generation.
+// see: https://nextjs.org/docs/api-reference/next/image#loader-configuration
+
 export function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
