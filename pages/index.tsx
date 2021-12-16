@@ -1,9 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-import { fetchJson } from 'lib/fetchJson'
-import type { HelloApiResponse } from 'lib/pages/api/hello'
-
 export function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
@@ -29,16 +26,9 @@ export function Home() {
 
         <button
           className="my-3 px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
-          onClick={async () => {
-            try {
-              const { name } = await fetchJson<HelloApiResponse>('/api/hello')
-              window.alert(`api returns: ${name}`)
-            } catch (error) {
-              console.error('An unexpected error happened:', error)
-            }
-          }}
+          onClick={() => window.alert('Hello!')}
         >
-          API Test Button
+          Test Button
         </button>
 
         <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
