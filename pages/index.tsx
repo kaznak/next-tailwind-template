@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { fetchJson } from 'lib/fetchJson'
 import type { HelloApiResponse } from 'lib/pages/api/hello'
 
+import vercelLogoSvg from 'public/vercel.svg'
+
 export function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
@@ -93,7 +95,7 @@ export function Home() {
         >
           Powered by{' '}
           <Image
-            src="/vercel.svg"
+            src={vercelLogoSvg}
             alt="Vercel Logo"
             className="h-4 ml-2"
             width={70.75}
